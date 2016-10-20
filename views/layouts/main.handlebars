@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>BMI Calculator</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+    <link rel="stylesheet" type="text/css" href="/css/app.min.css">
+    <link rel="stylesheet" href="/css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+      /* TODO */
+    </style>
+  </head>
+
+  
+
+  <body>
+    <div class="app-page" data-page="home">
+        <div class="app-topbar blue">
+            <div class="app-title">BMI Calculator</div>
+        </div>
+        <div class="app-content">
+            <div class="app-section center-form">
+                <form action="/calculate" method="post" class="bmi-form">
+                    <input type="number" name="weight" placeholder="Weight in kg" class="app-input required digits">
+                    <input type="number" name="height" placeholder="Height in cm" class="app-input required digits">
+                    <input type="number" name="age" placeholder="Age" class="app-input required digits">
+                    <input type="number" name="waist" placeholder="Waist" class="app-input required digits">
+                    <input type="number" name="hip" placeholder="Hip" class="app-input required digits">
+                    <div class="sex-input">
+                        <input type="radio" name="gender" value="m" checked class="radio"> Male
+                        <input type="radio" name="gender" value="f" class="radio"> Female<br>
+                    </div>
+                    <div class="app-button submit-button" style="background-color: #c9cacc;color: #8c8c8c;">Calculate!!!</div>
+                </form>
+            </div>
+            <div class="loading hidden">
+                <img src="http://www.gifss.com/profesiones/doctores/doctor-06.gif" 
+                    style="width: 100%;max-height: 100%;">
+                <!-- <img src="http://www.picgifs.com/job-graphics/job-graphics/doctor/animaatjes-dokter-49155.gif"> -->
+            </div>
+        </div>
+    </div>
+
+
+    <div class="app-page" data-page="result">
+        <div class="app-topbar blue">
+            <div class="app-button left" data-back data-autotitle></div>
+            <div class="app-title">Result</div>
+        </div>
+        <div class="app-content">
+            <div class="bmi-result">
+            <h4 style="text-align:center;"> Body Mass Index (BMI) </h4>
+                <table>
+                    <tr>
+                        <td>Prime</td>
+                        <td><span id="prime"><b></span></b></td>
+                    </tr>
+                    <tr>
+                        <td>Risk</td>
+                        <td><span id="risk"><b></span></b></td>
+                    </tr>
+                    <tr>
+                        <td>Status</td>
+                        <td><span id="status"><b></span></b></td>
+                    </tr>
+                    <tr>
+                        <td>Value</td>
+                        <td><span id="value"><b></span></b></td>
+                    </tr>
+                </table>
+
+                
+                <!-- Prime : <span id="prime"><b></span></b><br> -->
+                <!-- Risk : <span id="risk"><b></span></b><br>
+                Status : <span id="status"><b></span></b><br>
+                Value : <span id="value"><b></span></b><br> -->
+            </div>
+
+            <div class="bmr-result">
+                <h4> Basal Metabolic Rate (BMR) : <span id="value"><b></span></b><br> </h4>
+            </div>
+
+            <table>
+                <tr>
+                    <td>
+                        <b>Height</b>
+                    </td>
+                    <td>
+                        <span id="height-result-data"></span>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <b>Weight</b>
+                    </td>
+                    <td>
+                        <span id="weight-result-data"></span>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <b>Waist Hip Ratio</b>
+                    </td>
+                    <td>
+                        <span id="whr-result-data"></span>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <b>Waist to Height Ratio</b>
+                    </td>
+                    <td>
+                        <span id="whtr-result-data"></span>
+                    </td>
+                </tr>
+            </table>
+        </div>
+        <script type="text/javascript" src="/js/zepto.js"></script>
+        <script type="text/javascript" src="/js/app.min.js"></script>
+        <script type="text/javascript" src="js/app.js"></script>
+    </body>
+</html>

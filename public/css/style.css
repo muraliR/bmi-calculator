@@ -1,0 +1,30 @@
+.hidden {
+  display: none;
+}
+
+.app-section {
+  background-color: #b9bbbf;
+  height: 90%;
+}
+
+.bmi-form {
+  margin-top: 25% !important;
+}
+
+.bmi-form input{
+  margin-bottom: 5px;
+  border-radius: 8px;
+}
+
+.sex-input {
+  margin-top: 5%;
+  margin-bottom: 5%;
+}
+
+.radio{
+  display:inline
+}
+
+table, th, td {
+   border: 1px solid black;
+}
