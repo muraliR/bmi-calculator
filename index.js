@@ -7,13 +7,6 @@ app.get('/', function(req, res) {
 	res.render('home');
 });
 
-/*curl -X POST --include 'https://bmi.p.mashape.com/' \
-  -H 'X-Mashape-Key: uk8fe4AMzImshwEBzscxUWeMvf6tp10iRh3jsnapLBOAwOZePZ' \
-  -H 'Content-Type: application/json' \
-  -H 'Accept: application/json' \
-  --data-binary '{"weight":{"value":"85.00","unit":"kg"},"height":{"value":"170.00","unit":"cm"},"sex":"m","age":"24","waist":"34.00","hip":"40.00"}'*/
-
-
 app.get('/calculate', function(req, res) {
 	var url = "https://bmi.p.mashape.com/";
 	request({
